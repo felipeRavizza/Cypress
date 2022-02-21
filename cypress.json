@@ -1,0 +1,13 @@
+{
+    "reporter":"mochawesome",
+    "reporterOptions":{
+        "reportDir":"cypress/report/mochawesome-report",
+        "overwrite":"false",
+        "html":"true",
+        "json":"true",
+        "timestamp":"mmddyyyy_HHMMss",
+        "reportTitle":"RELATÓRIO DE TESTES",
+        "cdn":"true",
+        "charts":"true"
+    }
+}

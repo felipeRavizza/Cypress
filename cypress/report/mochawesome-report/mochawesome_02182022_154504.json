@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-18T18:44:54.816Z",
+    "end": "2022-02-18T18:45:04.199Z",
+    "duration": 9383,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9516637c-5642-46c0-9a4c-4fa0ba0216aa",
+      "title": "",
+      "fullFile": "cypress/integration/tests/teste.texo.js",
+      "file": "cypress/integration/tests/teste.texo.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0f40a7f-da37-4374-9c89-36725d6dbe88",
+          "title": "Json Place Holder",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar o link do Jsonplaceholder, Acessar o menu Guide ",
+              "fullTitle": "Json Place Holder Deve acessar o link do Jsonplaceholder, Acessar o menu Guide ",
+              "timedOut": null,
+              "duration": 6670,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Json = new _Jsonplaceholder.default();\nJson.acessarTela();\ncy.get(GUIDE_HREF).click();",
+              "err": {},
+              "uuid": "69929eaa-35d5-4906-827d-d15188f3cdbc",
+              "parentUUID": "c0f40a7f-da37-4374-9c89-36725d6dbe88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve capturar os dados exibidos em tela e salvá-los num array JSON",
+              "fullTitle": "Json Place Holder Deve capturar os dados exibidos em tela e salvá-los num array JSON",
+              "timedOut": null,
+              "duration": 93,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.expectValidJsonWithMinimumLength('/albums/1/photos',6);\nlet datalist = [];\nfetch('https://jsonplaceholder.typicode.com/albums/1/photos').then(response => response.json()).then(json => {\n  expect(json[5].albumId).to.eq(1);\n  expect(json[5].id).to.eq(6);\n  expect(json[5].title).to.eq('accusamus ea aliquid et amet sequi nemo');\n  expect(json[5].url).to.eq('https://via.placeholder.com/600/56a8c2');\n  expect(json[5].thumbnailUrl).to.eq('https://via.placeholder.com/150/56a8c2');\n});",
+              "err": {},
+              "uuid": "0eabdfa2-02df-4bc0-b27a-e94dea1cf87a",
+              "parentUUID": "c0f40a7f-da37-4374-9c89-36725d6dbe88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "69929eaa-35d5-4906-827d-d15188f3cdbc",
+            "0eabdfa2-02df-4bc0-b27a-e94dea1cf87a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6763,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": "false",
+        "html": "true",
+        "json": "true",
+        "timestamp": "mmddyyyy_HHMMss",
+        "reportTitle": "RELATÓRIO DE TESTES",
+        "cdn": "true",
+        "charts": "true"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
